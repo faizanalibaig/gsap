@@ -5,6 +5,7 @@ import { useRef, useState } from 'react'
 function App() {
 
   const ref=useRef()
+  const random=gsap.utils.random(-500,500, 100)
 
   useGSAP(()=>{
     gsap.from(ref.current,{
@@ -14,19 +15,27 @@ function App() {
       delay:0.5,
       opacity:0
     })
-  })
+  }, {scope:'#container'})
+
+  const [button, setButton]=useState(0)
 
   return (
     <main className='main'>
        <section id='container'>
-          <div ref={ref} id='first'></div>
+          <div id='first'></div>
           <div id='second'></div>
        </section>
 
-       <section ref={ref} id='container'>
+       <section ref={ref} id='container1'>
           <div  id='first'></div>
           <div id='second'></div>
        </section>
+
+       <button className="move" onClick={()=>{
+        setButton(random) 
+        console.log(random)}}>
+         Submit
+       </button>
     </main>
   )
 }

@@ -21,8 +21,34 @@ main{
   margin: 10px;
 }
 
+#container1{
+  border: 2px solid white;
+  width: 40%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+
+#container1 #first{
+  height: 200px;
+  width: 200px;
+  background: linear-gradient(to right bottom, lightblue, cadetblue);
+}
+
 #container #first{
   height: 200px;
   width: 200px;
   background: linear-gradient(to right bottom, lightblue, cadetblue);
+}
+
+.move{
+  padding: 40px 80px;
+  border-radius: 16px;
+  background-color: rgb(231, 34, 34);
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
 }
