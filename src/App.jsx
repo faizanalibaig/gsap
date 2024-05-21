@@ -8,7 +8,7 @@ function App() {
   const random=gsap.utils.random(-500,500, 100)
 
   useGSAP(()=>{
-    gsap.from(ref.current,{
+    gsap.to(ref.current,{
       rotate:360,
       scale:0,
       duration:1,
