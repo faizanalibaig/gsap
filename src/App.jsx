@@ -32,8 +32,14 @@ function App() {
        </section>
 
        <button className="move" onClick={()=>{
-        setButton(random) 
-        console.log(random)}}>
+        gsap.to(".move", {
+          x: random,
+          y: random,
+          duration: 1,
+          ease: "power2.inOut"
+        });
+        console.log(random)
+       }}>
          Submit
        </button>
     </main>
