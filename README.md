@@ -1,1 +1,1 @@
-gsap with react
+this repo is gsap with react
